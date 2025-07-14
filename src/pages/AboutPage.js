@@ -75,8 +75,8 @@ const AboutPage = () => {
               </div>
               <div className="relative">
                 <img
-                  src="https://images.pexels.com/photos/5212663/pexels-photo-5212663.jpeg?auto=compress&cs=tinysrgb&w=600"
-                  alt="Educational Technology"
+                  src="https://images.pexels.com/photos/8923668/pexels-photo-8923668.jpeg?auto=compress&cs=tinysrgb&w=600"
+                  alt="Indian Teachers Using Educational Technology"
                   className="rounded-lg shadow-lg"
                 />
               </div>
@@ -128,21 +128,21 @@ const AboutPage = () => {
                   name: 'Dr. Rahul Sharma',
                   role: 'CEO & Founder',
                   image:
-                    'https://images.pexels.com/photos/5212317/pexels-photo-5212317.jpeg?auto=compress&cs=tinysrgb&w=300',
+                    'https://images.pexels.com/photos/8923659/pexels-photo-8923659.jpeg?auto=compress&cs=tinysrgb&w=300',
                   bio: 'Former education administrator with 20+ years of experience in school management.',
                 },
                 {
                   name: 'Priya Patel',
                   role: 'CTO',
                   image:
-                    'https://images.pexels.com/photos/5212320/pexels-photo-5212320.jpeg?auto=compress&cs=tinysrgb&w=300',
+                    'https://images.pexels.com/photos/8923662/pexels-photo-8923662.jpeg?auto=compress&cs=tinysrgb&w=300',
                   bio: 'Technology leader specializing in scalable educational platforms and user experience.',
                 },
                 {
                   name: 'Arjun Kumar',
                   role: 'Head of Product',
                   image:
-                    'https://images.pexels.com/photos/5212319/pexels-photo-5212319.jpeg?auto=compress&cs=tinysrgb&w=300',
+                    'https://images.pexels.com/photos/8923664/pexels-photo-8923664.jpeg?auto=compress&cs=tinysrgb&w=300',
                   bio: 'Product strategist focused on creating intuitive solutions for educational institutions.',
                 },
               ].map((member, index) => (
