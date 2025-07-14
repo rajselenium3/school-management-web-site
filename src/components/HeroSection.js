@@ -75,10 +75,10 @@ const HeroSection = () => {
                 Start Your School
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
-              <button className="btn-secondary text-lg px-8 py-4">
+              <Link to="/login" className="btn-secondary text-lg px-8 py-4">
                 <Play className="mr-2 h-5 w-5" />
-                Watch Demo
-              </button>
+                Login to Dashboard
+              </Link>
             </motion.div>
 
             {/* Stats */}
@@ -108,8 +108,8 @@ const HeroSection = () => {
             <div className="relative z-10">
               <div className="card p-8 transform rotate-2 hover:rotate-0 transition-transform duration-500">
                 <img
-                  src="https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg?auto=compress&cs=tinysrgb&w=800"
-                  alt="School Management Dashboard"
+                  src="https://images.pexels.com/photos/8923671/pexels-photo-8923671.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  alt="Indian School Students in Classroom"
                   className="w-full h-auto rounded-xl"
                 />
               </div>

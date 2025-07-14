@@ -8,7 +8,7 @@ const TestimonialsSection = () => {
       name: 'Dr. Priya Sharma',
       role: 'Principal, Delhi Public School',
       image:
-        'https://images.pexels.com/photos/5212317/pexels-photo-5212317.jpeg?auto=compress&cs=tinysrgb&w=200',
+        'https://images.pexels.com/photos/8923664/pexels-photo-8923664.jpeg?auto=compress&cs=tinysrgb&w=200',
       content:
         'EduManage has revolutionized how we manage our school. The parent communication features are exceptional, and our administrative efficiency has improved by 70%. The platform is intuitive and our staff adapted quickly.',
       rating: 5,
@@ -18,7 +18,7 @@ const TestimonialsSection = () => {
       name: 'Rajesh Kumar',
       role: 'Director, Greenwood International',
       image:
-        'https://images.pexels.com/photos/5212319/pexels-photo-5212319.jpeg?auto=compress&cs=tinysrgb&w=200',
+        'https://images.pexels.com/photos/8923659/pexels-photo-8923659.jpeg?auto=compress&cs=tinysrgb&w=200',
       content:
         "The fee management system is outstanding. We've reduced manual work significantly and parents love the convenience of online payments and instant receipts. The analytics help us make better financial decisions.",
       rating: 5,
@@ -28,7 +28,7 @@ const TestimonialsSection = () => {
       name: 'Ms. Anjali Patel',
       role: 'Academic Coordinator, Lotus Academy',
       image:
-        'https://images.pexels.com/photos/5212320/pexels-photo-5212320.jpeg?auto=compress&cs=tinysrgb&w=200',
+        'https://images.pexels.com/photos/8923662/pexels-photo-8923662.jpeg?auto=compress&cs=tinysrgb&w=200',
       content:
         'The attendance tracking and grade management features are intuitive and comprehensive. Our teachers can focus more on teaching rather than paperwork. The mobile app is a game-changer for busy educators.',
       rating: 5,

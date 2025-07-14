@@ -185,9 +185,9 @@ const FeaturesSection = () => {
           className="text-center mt-16"
         >
           <div className="inline-flex items-center space-x-4">
-            <span className="text-neutral-600">Ready to get started?</span>
+              <Link to="/register" className="btn-primary">
             <a href="/register" className="btn-primary">
-              Explore All Features
+              </Link>
             </a>
           </div>
         </motion.div>
