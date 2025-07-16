@@ -1,13 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Play, Sparkles, Users, BookOpen, Award } from 'lucide-react';
+import { ArrowRight, Play, Sparkles, Users, BookOpen, Award, Clock, Shield, Zap } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const HeroSection = () => {
   const stats = [
-    { icon: Users, value: '500+', label: 'Schools', color: 'text-primary-600' },
-    { icon: BookOpen, value: '50K+', label: 'Students', color: 'text-secondary-600' },
-    { icon: Award, value: '10K+', label: 'Teachers', color: 'text-accent-600' },
+    { icon: Users, value: '50K+', label: 'Happy Students', color: 'text-blue-600' },
+    { icon: BookOpen, value: '500+', label: 'Partner Schools', color: 'text-green-600' },
+    { icon: Award, value: '99.9%', label: 'Uptime', color: 'text-purple-600' },
+  ];
+
+  const benefits = [
+    { icon: Clock, text: 'Save 40+ hours/month' },
+    { icon: Shield, text: '100% Secure & Reliable' },
+    { icon: Zap, text: 'Instant Setup' },
   ];
 
   const containerVariants = {
@@ -34,119 +40,176 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 gradient-bg"></div>
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-blue-50 via-white to-indigo-50">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-0 left-0 w-full h-full" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%234F46E5' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+        }}></div>
+      </div>
       
-      {/* Decorative elements */}
-      <div className="absolute top-20 left-10 w-20 h-20 bg-primary-200 rounded-full opacity-60 animate-bounce-subtle"></div>
-      <div className="absolute top-40 right-20 w-16 h-16 bg-secondary-200 rounded-full opacity-60 animate-bounce-subtle animation-delay-200"></div>
-      <div className="absolute bottom-40 left-20 w-12 h-12 bg-accent-200 rounded-full opacity-60 animate-bounce-subtle animation-delay-400"></div>
+      {/* Floating elements */}
+      <div className="absolute top-20 left-10 w-20 h-20 bg-blue-200 rounded-full opacity-60 animate-pulse"></div>
+      <div className="absolute top-40 right-20 w-16 h-16 bg-green-200 rounded-full opacity-60 animate-pulse" style={{ animationDelay: '1s' }}></div>
+      <div className="absolute bottom-40 left-20 w-12 h-12 bg-purple-200 rounded-full opacity-60 animate-pulse" style={{ animationDelay: '2s' }}></div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
+          className="grid lg:grid-cols-2 gap-12 items-center"
         >
-          {/* Left Content */}
+          {/* Left Column - Content */}
           <div className="space-y-8">
             <motion.div variants={itemVariants} className="space-y-6">
-              <div className="inline-flex items-center px-4 py-2 bg-primary-100 rounded-full text-primary-700 text-sm font-medium">
+              {/* Badge */}
+              <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
                 <Sparkles className="h-4 w-4 mr-2" />
-                Trusted by 500+ Schools Worldwide
+                #1 School Management Platform
               </div>
-              
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-                Transform Your
-                <span className="text-gradient block">School</span>
-                with Smart Management
+
+              {/* Main Headline */}
+              <h1 className="text-5xl lg:text-7xl font-bold text-gray-900 leading-tight">
+                Save{' '}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+                  40+ hours
+                </span>{' '}
+                per month with our
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-blue-600">
+                  All-in-One School Platform
+                </span>
               </h1>
-              
-              <p className="text-xl text-neutral-600 max-w-2xl leading-relaxed">
-                Comprehensive school management system that connects students,
-                teachers, parents, and administrators in one powerful, intuitive platform.
+
+              {/* Subtitle */}
+              <p className="text-xl text-gray-600 leading-relaxed max-w-2xl">
+                Reduce administrative costs and improve cash flows through automation. 
+                Now you can focus on providing quality education and nurturing future leaders.
               </p>
+
+              {/* Benefits */}
+              <div className="flex flex-wrap gap-4">
+                {benefits.map((benefit, index) => (
+                  <div key={index} className="flex items-center space-x-2 bg-white rounded-lg px-4 py-2 shadow-sm border border-gray-200">
+                    <benefit.icon className="h-5 w-5 text-blue-600" />
+                    <span className="text-gray-700 font-medium">{benefit.text}</span>
+                  </div>
+                ))}
+              </div>
             </motion.div>
 
+            {/* CTA Buttons */}
             <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4">
-              <Link to="/register" className="btn-primary text-lg px-8 py-4">
-                Start Your School
-                <ArrowRight className="ml-2 h-5 w-5" />
+              <Link
+                to="/register"
+                className="group inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-lg font-semibold rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              >
+                Get Free Demo
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
               </Link>
-              <Link to="/login" className="btn-secondary text-lg px-8 py-4">
+              
+              <button className="group inline-flex items-center justify-center px-8 py-4 bg-white text-gray-700 text-lg font-semibold rounded-xl border-2 border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-all duration-300">
                 <Play className="mr-2 h-5 w-5" />
-                Login to Dashboard
-              </Link>
+                Watch Demo
+              </button>
             </motion.div>
 
             {/* Stats */}
             <motion.div variants={itemVariants} className="grid grid-cols-3 gap-8 pt-8">
               {stats.map((stat, index) => (
-                <motion.div
-                  key={index}
-                  variants={itemVariants}
-                  className="text-center group"
-                >
-                  <div className={`inline-flex p-3 rounded-2xl bg-white shadow-soft mb-3 group-hover:scale-110 transition-transform duration-300`}>
-                    <stat.icon className={`h-6 w-6 ${stat.color}`} />
+                <div key={index} className="text-center">
+                  <div className="flex justify-center mb-2">
+                    <stat.icon className={`h-8 w-8 ${stat.color}`} />
                   </div>
-                  <div className={`text-3xl font-bold ${stat.color} mb-1`}>
-                    {stat.value}
-                  </div>
-                  <div className="text-sm text-neutral-600 font-medium">
-                    {stat.label}
-                  </div>
-                </motion.div>
+                  <div className="text-2xl font-bold text-gray-900">{stat.value}</div>
+                  <div className="text-sm text-gray-600">{stat.label}</div>
+                </div>
               ))}
             </motion.div>
           </div>
 
-          {/* Right Content - Hero Image */}
+          {/* Right Column - Visual */}
           <motion.div variants={itemVariants} className="relative">
-            <div className="relative z-10">
-              <div className="card p-8 transform rotate-2 hover:rotate-0 transition-transform duration-500">
-                <img
-                  src="https://images.pexels.com/photos/8923671/pexels-photo-8923671.jpeg?auto=compress&cs=tinysrgb&w=800"
-                  alt="Indian School Students in Classroom"
-                  className="w-full h-auto rounded-xl"
-                />
+            <div className="relative">
+              {/* Main Dashboard Mockup */}
+              <div className="bg-white rounded-2xl shadow-2xl overflow-hidden transform rotate-3 hover:rotate-1 transition-transform duration-500">
+                <div className="bg-gradient-to-r from-blue-600 to-purple-600 h-12 flex items-center px-6">
+                  <div className="flex space-x-2">
+                    <div className="w-3 h-3 bg-red-400 rounded-full"></div>
+                    <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
+                    <div className="w-3 h-3 bg-green-400 rounded-full"></div>
+                  </div>
+                  <div className="flex-1 text-center text-white font-medium">EduManage Dashboard</div>
+                </div>
+                
+                <div className="p-6 space-y-4">
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="bg-blue-50 p-4 rounded-lg">
+                      <div className="text-blue-600 text-2xl font-bold">1,247</div>
+                      <div className="text-gray-600 text-sm">Active Students</div>
+                    </div>
+                    <div className="bg-green-50 p-4 rounded-lg">
+                      <div className="text-green-600 text-2xl font-bold">89</div>
+                      <div className="text-gray-600 text-sm">Teachers</div>
+                    </div>
+                  </div>
+                  
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center space-x-3">
+                        <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
+                          <Users className="h-4 w-4 text-blue-600" />
+                        </div>
+                        <div>
+                          <div className="font-medium text-gray-900">Student Management</div>
+                          <div className="text-sm text-gray-500">Track progress & attendance</div>
+                        </div>
+                      </div>
+                      <div className="text-green-600 font-bold">98%</div>
+                    </div>
+                    
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center space-x-3">
+                        <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
+                          <BookOpen className="h-4 w-4 text-green-600" />
+                        </div>
+                        <div>
+                          <div className="font-medium text-gray-900">Fee Collection</div>
+                          <div className="text-sm text-gray-500">Automated payments</div>
+                        </div>
+                      </div>
+                      <div className="text-green-600 font-bold">₹2.4L</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Floating cards */}
+              <div className="absolute -top-6 -right-6 bg-white rounded-lg shadow-xl p-4 transform -rotate-12 hover:rotate-0 transition-transform duration-500">
+                <div className="text-green-600 text-xl font-bold">100%</div>
+                <div className="text-gray-600 text-sm">Satisfaction</div>
+              </div>
+              
+              <div className="absolute -bottom-6 -left-6 bg-white rounded-lg shadow-xl p-4 transform rotate-12 hover:rotate-0 transition-transform duration-500">
+                <div className="text-purple-600 text-xl font-bold">24/7</div>
+                <div className="text-gray-600 text-sm">Support</div>
               </div>
             </div>
-            
-            {/* Floating cards */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8, rotate: -10 }}
-              animate={{ opacity: 1, scale: 1, rotate: -5 }}
-              transition={{ delay: 1, duration: 0.6 }}
-              className="absolute -top-6 -left-6 bg-white p-4 rounded-2xl shadow-large"
-            >
-              <div className="flex items-center space-x-3">
-                <div className="w-3 h-3 bg-secondary-500 rounded-full"></div>
-                <span className="text-sm font-medium text-neutral-700">
-                  Attendance: 98.5%
-                </span>
-              </div>
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8, rotate: 10 }}
-              animate={{ opacity: 1, scale: 1, rotate: 5 }}
-              transition={{ delay: 1.2, duration: 0.6 }}
-              className="absolute -bottom-6 -right-6 bg-white p-4 rounded-2xl shadow-large"
-            >
-              <div className="flex items-center space-x-3">
-                <div className="w-3 h-3 bg-primary-500 rounded-full"></div>
-                <span className="text-sm font-medium text-neutral-700">
-                  New Messages: 12
-                </span>
-              </div>
-            </motion.div>
-            
-            {/* Background decoration */}
-            <div className="absolute -inset-6 bg-gradient-to-r from-primary-200 to-secondary-200 rounded-4xl opacity-20 -z-10"></div>
           </motion.div>
+        </motion.div>
+
+        {/* Trust indicators */}
+        <motion.div 
+          variants={itemVariants}
+          className="mt-20 text-center"
+        >
+          <p className="text-gray-500 text-lg mb-8">Trusted by 500+ educational institutions worldwide</p>
+          <div className="flex justify-center items-center space-x-8 opacity-60">
+            <div className="h-12 w-24 bg-gray-300 rounded flex items-center justify-center text-gray-600 font-semibold">CBSE</div>
+            <div className="h-12 w-24 bg-gray-300 rounded flex items-center justify-center text-gray-600 font-semibold">ICSE</div>
+            <div className="h-12 w-24 bg-gray-300 rounded flex items-center justify-center text-gray-600 font-semibold">IB</div>
+            <div className="h-12 w-24 bg-gray-300 rounded flex items-center justify-center text-gray-600 font-semibold">STATE</div>
+          </div>
         </motion.div>
       </div>
     </section>
