@@ -53,7 +53,7 @@ const HeroSection = () => {
       <div className="absolute top-40 right-20 w-16 h-16 bg-green-200 rounded-full opacity-60 animate-pulse" style={{ animationDelay: '1s' }}></div>
       <div className="absolute bottom-40 left-20 w-12 h-12 bg-purple-200 rounded-full opacity-60 animate-pulse" style={{ animationDelay: '2s' }}></div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -70,21 +70,16 @@ const HeroSection = () => {
               </div>
 
               {/* Main Headline */}
-              <h1 className="text-5xl lg:text-7xl font-bold text-gray-900 leading-tight">
-                Save{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
-                  40+ hours
-                </span>{' '}
-                per month with our
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-blue-600">
-                  All-in-One School Platform
+              <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight">
+                Modern School
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+                  Management Made Simple
                 </span>
               </h1>
 
               {/* Subtitle */}
               <p className="text-xl text-gray-600 leading-relaxed max-w-2xl">
-                Reduce administrative costs and improve cash flows through automation. 
-                Now you can focus on providing quality education and nurturing future leaders.
+                Streamline operations, automate administration, and focus on what matters most - quality education.
               </p>
 
               {/* Benefits */}
@@ -201,14 +196,14 @@ const HeroSection = () => {
         {/* Trust indicators */}
         <motion.div 
           variants={itemVariants}
-          className="mt-20 text-center"
+          className="mt-16 text-center"
         >
-          <p className="text-gray-500 text-lg mb-8">Trusted by 500+ educational institutions worldwide</p>
+          <p className="text-gray-500 text-lg mb-6">Trusted by 500+ educational institutions</p>
           <div className="flex justify-center items-center space-x-8 opacity-60">
-            <div className="h-12 w-24 bg-gray-300 rounded flex items-center justify-center text-gray-600 font-semibold">CBSE</div>
-            <div className="h-12 w-24 bg-gray-300 rounded flex items-center justify-center text-gray-600 font-semibold">ICSE</div>
-            <div className="h-12 w-24 bg-gray-300 rounded flex items-center justify-center text-gray-600 font-semibold">IB</div>
-            <div className="h-12 w-24 bg-gray-300 rounded flex items-center justify-center text-gray-600 font-semibold">STATE</div>
+            <div className="h-10 w-20 bg-gray-300 rounded flex items-center justify-center text-gray-600 font-semibold text-sm">CBSE</div>
+            <div className="h-10 w-20 bg-gray-300 rounded flex items-center justify-center text-gray-600 font-semibold text-sm">ICSE</div>
+            <div className="h-10 w-20 bg-gray-300 rounded flex items-center justify-center text-gray-600 font-semibold text-sm">IB</div>
+            <div className="h-10 w-20 bg-gray-300 rounded flex items-center justify-center text-gray-600 font-semibold text-sm">STATE</div>
           </div>
         </motion.div>
       </div>

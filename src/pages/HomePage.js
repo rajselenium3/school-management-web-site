@@ -12,24 +12,19 @@ import { Users, BookOpen, Award, TrendingUp } from 'lucide-react';
 const HomePage = () => {
   const schoolShowcase = [
     {
-      image: "https://images.pexels.com/photos/8923665/pexels-photo-8923665.jpeg?auto=compress&cs=tinysrgb&w=400",
-      title: "Modern Classrooms",
-      description: "Technology-enabled learning environments"
+      image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80",
+      title: "Digital Dashboard",
+      description: "Modern school management at your fingertips"
     },
     {
-      image: "https://images.pexels.com/photos/8923669/pexels-photo-8923669.jpeg?auto=compress&cs=tinysrgb&w=400",
-      title: "Dedicated Teachers",
-      description: "Passionate educators shaping young minds"
+      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80",
+      title: "Smart Analytics",
+      description: "Data-driven insights for better decisions"
     },
     {
-      image: "https://images.pexels.com/photos/8923667/pexels-photo-8923667.jpeg?auto=compress&cs=tinysrgb&w=400",
-      title: "Student Success",
-      description: "Celebrating achievements and milestones"
-    },
-    {
-      image: "https://images.pexels.com/photos/8923666/pexels-photo-8923666.jpeg?auto=compress&cs=tinysrgb&w=400",
-      title: "Interactive Learning",
-      description: "Engaging educational experiences"
+      image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=600&q=80",
+      title: "Seamless Communication",
+      description: "Connect teachers, students, and parents effortlessly"
     }
   ];
 
@@ -46,27 +41,26 @@ const HomePage = () => {
       <main>
         <HeroSection />
         
-        {/* Indian Schools Showcase */}
-        <section className="py-24 bg-white">
+        {/* School Management Showcase - Reduced and Updated */}
+        <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="text-center mb-16"
+              className="text-center mb-12"
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-6">
-                Empowering
-                <span className="text-gradient"> Indian Education</span>
+              <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+                Transforming
+                <span className="text-gradient"> School Management</span>
               </h2>
-              <p className="text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed">
-                From traditional values to modern technology, we're helping Indian schools 
-                create the perfect blend of heritage and innovation in education.
+              <p className="text-lg text-neutral-600 max-w-2xl mx-auto leading-relaxed">
+                Experience the future of education management with our comprehensive digital platform.
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               {schoolShowcase.map((item, index) => (
                 <motion.div
                   key={index}
@@ -124,21 +118,21 @@ const HomePage = () => {
         <FeaturesSection />
         <TestimonialsSection />
         
-        {/* Quick Access Section */}
-        <section className="py-20 bg-gradient-to-br from-primary-50 to-secondary-50">
+        {/* Quick Access Section - Streamlined */}
+        <section className="py-16 bg-gradient-to-br from-primary-50 to-secondary-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="text-center mb-12"
+              className="text-center mb-10"
             >
               <h2 className="text-3xl font-bold text-neutral-900 mb-4">
-                Quick Access
+                Ready to Get Started?
               </h2>
               <p className="text-lg text-neutral-600">
-                Already have an account? Access your dashboard or start your journey with us.
+                Join thousands of schools already using our platform.
               </p>
             </motion.div>
 
@@ -157,7 +151,7 @@ const HomePage = () => {
                   Existing Users
                 </h3>
                 <p className="text-neutral-600 mb-6">
-                  Access your school management dashboard and continue managing your institution.
+                  Access your school management dashboard.
                 </p>
                 <Link to="/login" className="btn-primary w-full">
                   Login to Dashboard
@@ -178,7 +172,7 @@ const HomePage = () => {
                   New Schools
                 </h3>
                 <p className="text-neutral-600 mb-6">
-                  Start your digital transformation journey with our comprehensive school management system.
+                  Start your digital transformation journey.
                 </p>
                 <Link to="/register" className="btn-secondary w-full">
                   Register Your School
